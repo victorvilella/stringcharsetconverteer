@@ -1,8 +1,12 @@
 {
-    "name": "victor/string-converter",
+    "name": "victor/conversor-de-strings-win1252-utf8",
     "description": "Um simples conversor de encoding entre Win1252 e UTF-8",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Felippe Maurício Vieira",
+            "email": "felippemauriciov@gmail.com"
+        },
         {
             "name": "Victor Vilella",
             "email": "victor.cbl@gmail.com"
