@@ -1,4 +1,5 @@
 <?php
+namespace VictorVilella\StringConverter;
 class Converter
 {
     public function convert_utf8_win1252 ($var)
