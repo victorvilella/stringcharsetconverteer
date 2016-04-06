@@ -1,5 +1,5 @@
 {
-    "name": "victor/conversor-de-strings-win1252-utf8",
+    "name": "victorvilella/conversorDeStringsWin1252Utf8",
     "description": "Um simples conversor de encoding entre Win1252 e UTF-8",
     "license": "MIT",
     "authors": [
