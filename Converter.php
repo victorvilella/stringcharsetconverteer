@@ -1,5 +1,5 @@
 <?php
-
+namespace victorvilella\conversordestringswin1252utf8;
 
 class Converter
 {
