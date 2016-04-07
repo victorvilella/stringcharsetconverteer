@@ -1,5 +1,9 @@
 <?php
-namespace victorvilella\conversordestringswin1252utf8;
+/**
+ * @author Victor Vilella
+ * @license https://opensource.org/licenses/MIT MIT
+ */
+namespace victor\win1252utf8;
 
 class Converter
 {
