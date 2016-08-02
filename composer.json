@@ -1,5 +1,5 @@
 {
-    "name": "victor/win1252utf8",
+    "name": "victor/ConversorWin1252UTF8",
     "description": "Um simples conversor de encoding entre Win1252 e UTF-8",
     "license": "MIT",
     "authors": [
@@ -12,6 +12,6 @@
             "email": "victor.cbl@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev-master",
     "require": {}
 }
