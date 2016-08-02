@@ -3,7 +3,7 @@
  * @author Victor Vilella
  * @license https://opensource.org/licenses/MIT MIT
  */
-namespace ConversorWin1252UTF8;
+namespace victor\convertwin1252utf8;
 
 class Converter
 {
