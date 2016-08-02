@@ -12,6 +12,6 @@
             "email": "victor.cbl@gmail.com"
         }
     ],
-    "minimum-stability": "dev-master",
+    "minimum-stability": "stable",
     "require": {}
 }
