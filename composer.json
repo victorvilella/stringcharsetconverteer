@@ -12,6 +12,17 @@
             "email": "victor.cbl@gmail.com"
         }
     ],
+    "autoload": {
+        "classmap": [
+            "src/Converter.php"
+        ],
+        "files": [
+            "src/Converter.php"
+        ],
+        "psr-4": {
+            "Converter\\": "src/"
+        }
+    },
     "minimum-stability": "stable",
     "require": {}
 }
