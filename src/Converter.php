@@ -1,6 +1,7 @@
 <?php
 /**
- * @author Victor Vilella
+ * @author Victor Vilella <victor.cbl@gmail.com>
+ * @author Felippe Maurício Vieira <felippemauriciov@gmail.com>
  * @license https://opensource.org/licenses/MIT MIT
  */
 namespace victor\convertwin1252utf8;
