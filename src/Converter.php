@@ -15,12 +15,20 @@ namespace victor\convertwin1252utf8;
 class Converter
 {
     /**
+     * class constants
+     *  possible accessibilities of object's properties
+     */
+    const PROP_ACCESS_PUBLIC = 'public';
+    const PROP_ACCESS_PRIVATE = 'private';
+    const PROP_ACCESS_PROTECTED = 'protected';
+
+    /**
      * converts any type of object from utf8 to win1252
      *
      * @param mixed $var
      * @return mixed
      */
-    public function convert_utf8_win1252 ($var)
+    public function convert_utf8_win1252($var)
     {
         if (is_string($var)) {
             $var = iconv("UTF-8", "Windows-1252", $var);
@@ -31,9 +39,15 @@ class Converter
             }
         }
         elseif (is_object($var)) {
-            $keys = array_keys((array) $var);
-            foreach ($keys as $key) {
-                $var->$key = $this->convert_utf8_win1252($var->$key);
+            $reflection = new \ReflectionObject($var);
+            foreach($reflection->getProperties() as $property) {
+                $access = ($property->isPrivate()) ? self::PROP_ACCESS_PRIVATE : (($property->isProtected()) ? self::PROP_ACCESS_PROTECTED : self::PROP_ACCESS_PUBLIC);
+                $property->setAccessible(true);
+                $property->setValue($var, $this->convert_utf8_win1252($property->getValue($var)));
+
+                if($access !== self::PROP_ACCESS_PUBLIC) {
+                    $property->setAccessible(false);
+                }
             }
         }
         return $var;
@@ -45,7 +59,7 @@ class Converter
      * @param mixed $var
      * @return mixed
      */
-    public function convert_win1252_utf8 ($var)
+    public function convert_win1252_utf8($var)
     {
         if (is_string($var)) {
             $var = utf8_encode($var);
@@ -56,9 +70,15 @@ class Converter
             }
         }
         elseif (is_object($var)) {
-            $keys = array_keys((array) $var);
-            foreach ($keys as $key) {
-                $var->$key = $this->convert_win1252_utf8($var->$key);
+            $reflection = new \ReflectionObject($var);
+            foreach($reflection->getProperties() as $property) {
+                $access = ($property->isPrivate()) ? self::PROP_ACCESS_PRIVATE : (($property->isProtected()) ? self::PROP_ACCESS_PROTECTED : self::PROP_ACCESS_PUBLIC);
+                $property->setAccessible(true);
+                $property->setValue($var, $this->convert_win1252_utf8($property->getValue($var)));
+
+                if($access !== self::PROP_ACCESS_PUBLIC) {
+                    $property->setAccessible(false);
+                }
             }
         }
         return $var;
